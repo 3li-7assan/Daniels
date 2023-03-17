@@ -1,0 +1,330 @@
+
+
+.title h2{
+    font-size: 40px;
+    font-weight: 900;
+   text-align: center;
+}
+
+.dots{
+    background-image: url(../img/dots.png);
+    width: 150px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+
+
+section{
+    padding-block: 50px;
+}
+
+/* ======================= start navbar ==================== */
+
+
+.navbar .nav-link {
+    position: relative;
+    padding-left: 0 !important;
+    padding-right: 20px !important;
+ }
+ 
+.navbar .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.5s;
+ }
+ 
+.navbar .nav-link.active::before {
+    width: 40px;
+ }
+/* ======================= end navbar ========================= */
+/* =============== start home ============= */
+.home{
+    background: url(../img/bg.jpg) center no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+.home .layer{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.8));
+}
+.home .home-area .home-h1{
+    font-size: 50px;
+    font-weight: 900;
+    padding-bottom: 20px;
+}
+.home .home-area .text p::after{
+    content: '';
+    animation: typing 4s ease-in-out infinite;
+    font-weight: 400;
+}
+@keyframes typing {
+    0%{content: '|';}
+    5%{content: 'La|';}
+    10%{content: 'Larr|';}
+    15%{content: 'Larry |';}
+    20%{content: 'Larry D|';}
+    25%{content: 'Larry Da|';}
+    30%{content: 'Larry Dani|';}
+    35%{content: 'Larry Daniel|';}
+    40%{content: 'Larry Daniels|';}
+    45%{content: '|';}
+    50%{content: 'De|';}
+    55%{content: 'Deve|';}
+    60%{content: 'Deve|';}
+    65%{content: 'Develo|';}
+    70%{content: 'Develope|';}
+    75%{content: 'Developer|';}
+    80%{content: '|';}
+    85%{content: 'De|';}
+    90%{content: 'Desi|';}
+    95%{content: 'Desig|';}
+    100%{content: 'Designer|';}
+}
+.social li{
+    cursor: pointer;
+}
+/* ============= end home =============== */
+/* =============== start about ============ */
+.about .about-bars .upper-bar{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about .about-bars .bar-1{
+    width: 95%;
+}
+
+.about .about-bars .bar-2{
+    width: 80%;
+}
+
+.about .about-bars .bar-3{
+    width: 90%;
+}
+.about .about-bars .upper-bar span{
+    padding: 1px 10px;
+}
+.about .about-buttons .btn-1,.btn-2{
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.about .about-buttons .btn-1{
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+.about .about-buttons .btn-2{
+    background-color: transparent;
+    color: black;
+    transform: all 0.5s;
+}
+.about .about-buttons .btn-1:hover{
+    background-color: white;
+    color: black;
+}
+
+.about .about-buttons .btn-2:hover{
+    background-color: black;
+    color: white;
+}
+/* ================ end about ================= */
+/* ================ start services ================ */
+.services .services-area{
+    margin-top: 70px;
+}
+.services .card span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.services .card:hover span{
+    background-color: black;
+    color: white;
+}
+/* =================== end services ======================== */
+/* ===================== start portfolio ====================== */
+
+ 
+.works .nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s;
+ }
+ 
+ .works .nav-pills .nav-link.active::before {
+    width: 25px;
+ }
+.works .works-area{
+    margin-top: 70px;
+}
+.works .nav-pills .nav-link{
+    /* scroll spy */
+    position: relative;
+    padding-left: 0 !important;
+    padding-right: 20px !important;
+    /* end scroll spy */
+    background-color: unset;
+    color: black;
+    font-weight: bold;
+    border: unset;
+}
+.works .layer{
+    position: absolute;
+    left: 1.5%;
+    top: 1.5%;
+    width: 97%;
+    height: 97%;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: all .5s .3s;
+}
+.works .text{
+    position: absolute;
+    left: 50%;
+    top: -150%;
+    transform: translate(-50%,-40%);
+    z-index: 3;
+    transition: top 1s .2s;
+}
+.works .icons{
+    position: absolute;
+    left: 50%;
+    top: 150%;
+    transform: translate(-50%,-60%);
+    z-index: 3;
+    transition: top 1s .2s;
+}
+/* 
+.works .image img{
+    transition: all .5s;
+}
+.works .image:hover img{
+    transform: scale(1.2);
+} */
+.works .image:hover .layer{
+    opacity: 1;
+}
+.works .image:hover .text{
+    top: 40%;
+}
+.works .image:hover .icons{
+    top: 60%;
+}
+.works .icons span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+    transition: all .5s;
+}
+.works .icons span:hover {
+    background-color: white;
+    color: black;
+}
+/* ========================= end portfolio ========================= */
+/* ================== start testimonial ======================== */
+
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: gray;
+}
+.carousel-indicators [data-bs-target]{
+    transition: background-color 0.2s;
+}
+.carousel-indicators [data-bs-target]:hover{
+    background-color: black;
+}
+.clients .dots{
+
+    background-image: url(../img/dots.png);
+    width: 220px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+/* ======================= end testimonial ====================== */
+/* ======================== start blog ======================== */
+.blog .blog-area{
+    padding-block: 70px;
+}
+.blog .image img{
+    transition: transform 0.5s;
+}
+
+.blog .image:hover img{
+    transform: scale(1.2);
+}
+.blog .carousel-indicators{
+    margin-bottom: -50px;
+}
+/* =========================== end blog ========================== */
+/* ================= start contact ==================== */
+.contact .contact-area{
+    margin-top: 70px;
+}
+.contact .item span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    font-size: 30px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.contact .item:hover span{
+    background-color: black;
+    color: white;
+}
+.contact button{
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    padding: 10px 50px;
+    border: 1px solid black;       
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.contact button:hover{
+    background-color: white;
+    color: black;
+}
+.contact .dots{
+    
+    background-image: url(../img/dots.png);
+    width: 200px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+/* ====================== end contact ====================== */
